@@ -1,0 +1,59 @@
+{
+    "name": "yesminer",
+    "version": "1.0.0",
+    "description": "Node.js CPUchain Miner",
+    "license": "MIT",
+    "author": "CPUchain",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "keywords": [
+        "yespower",
+        "proof-of-work",
+        "cpuchain",
+        "wasm",
+        "webassembly"
+    ],
+    "scripts": {
+        "lint": "eslint src/**/*.ts",
+        "build:types": "tsc --declaration --emitDeclarationOnly -p tsconfig.build.json",
+        "build:bundle": "webpack",
+        "build:pkg": "pkg -d --no-bytecode -c ./package.json ./lib/node.js",
+        "build": "yarn build:types && yarn build:bundle && yarn build:pkg",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "target": "node22",
+    "pkg": {
+        "scripts": "./lib/node.js",
+        "assets": [
+            "lib"
+        ],
+        "targets": [
+            "node22-linux-x64",
+            "node22-win-x64"
+        ],
+        "outputPath": "."
+    },
+    "devDependencies": {
+        "@cpuchain/eslint": "^1.0.4",
+        "@cpuchain/logger": "^1.0.3",
+        "@types/node": "^22.13.5",
+        "@types/web": "^0.0.207",
+        "@types/ws": "^8.5.14",
+        "@yao-pkg/pkg": "^6.3.1",
+        "commander": "^13.1.0",
+        "esbuild-loader": "^4.3.0",
+        "eventemitter3": "^5.0.1",
+        "isomorphic-ws": "^5.0.0",
+        "node-polyfill-webpack-plugin": "^4.1.0",
+        "ts-node": "^10.9.2",
+        "tsc": "^2.0.4",
+        "typescript": "^5.7.3",
+        "webpack": "^5.98.0",
+        "webpack-cli": "^6.0.1",
+        "ws": "^8.18.1",
+        "yespower-wasm": "^1.0.1"
+    },
+    "resolutions": {
+        "fast-glob": ">=3.3.3"
+    }
+}
