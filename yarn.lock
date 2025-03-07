@@ -4297,10 +4297,10 @@ yargs@^16.2.0:
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
 
-yespower-wasm@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/yespower-wasm/-/yespower-wasm-1.0.1.tgz#7c000a42510e1f4f9e0f0903bf55ad0bb8f3919d"
-  integrity sha512-2UhXLdGFfCvlaUSwujQ1kcj3h17vJDtUGc/lApQP+Hh72fRBYIZ7OVDP1svyt9Jk4ZybjK1cUJ+XPn4NNKZcbg==
+yespower-wasm@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/yespower-wasm/-/yespower-wasm-1.0.2.tgz#93027e404a02b21a65277a845d0315b743a5e020"
+  integrity sha512-FnuDXKQ5zobMDob2jsMLDtz9AN+f54mTSJNjNGRN7pmxYXfNMXwyuHxHzOiFAT1ZVPCsjERHjd2O1PRXTtWkFg==
 
 yn@3.1.1:
   version "3.1.1"

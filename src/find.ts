@@ -67,7 +67,7 @@ export async function findNonce(
     while (true) {
         const nonceBytes = setLength(hexToBytes(nonce.toString(16)), 8, false);
         const concatted = concatBytes(header, bytesReverse(nonceBytes));
-        const result = BigInt(bytesToHex(yespower.Hash(concatted, algoPers)));
+        const result = BigInt(bytesToHex(yespower.Hash(concatted, undefined, undefined, algoPers)));
         const blockFound = blockTarget > result;
 
         // send found nonce
