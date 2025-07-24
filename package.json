@@ -43,7 +43,7 @@
     "scripts": {
         "lint": "eslint src/**/*.ts test/**/*.ts",
         "build:pkg": "tsx ./scripts/pkgJson.ts",
-        "build:dist": "pkg -d --no-native-build --no-signature --no-bytecode -c ./package.json ./lib/node.cjs",
+        "build:dist": "yarn build && pkg -d --no-native-build --no-signature --no-bytecode -c ./package.json ./lib/node.cjs",
         "build": "yarn build:pkg && tsc -p tsconfig.types.json --noEmit && rollup -c",
         "start": "tsx src/node.ts",
         "docs:dev": "vitepress dev docs",
